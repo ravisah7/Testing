@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Hostel Finder</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="#hostels">Hostels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <header>
+        <h1>Hostel Finder</h1>
+        <p>Find Your Perfect Student Hostel</p>
+    </header>
+
+<section class="search">
+    <h2>Search Hostel</h2>
+
+    <input type="text" id="city"
+           placeholder="Enter your city">
+           
+<label for="hostelType">Choose Hostel Type:</label>
+
+<select id="hostelType">
+    <option value="">Select Hostel Type</option>
+    <option value="boy">Boys Hostel</option>
+    <option value="girl">Girls Hostel</option>
+</select>
+
+
+    <button onclick="searchHostel()">Search</button>
+
+
+    <p id="message"></p>
+</section>
+
+
+    
+<section class="container my-5" id="hostels">
+    <h2 class="text-center mb-4">Available Hostels</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Sunrise Hostel</h3>
+                    <p class="card-text">Location: Ahmedabad</p>
+                    <p class="card-text">Rent: Rs. 7000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Sunrise Hostel', 'Ahmedabad', 7000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Student Home</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 6500 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Student Home', 'Rajkot', 6500)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+            <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Paradiese Boys hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 7000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('paradiese boys hostel', 'Rajkot', 7000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+           <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Galaxy Prime Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 6000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Galaxy Prime Hostel', 'Rajkot', 6000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+            <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Shivam Hostel and PG</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Shivam Hostel and PG', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="col-md-4">
+           <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Uv Boys Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('UV Boys Hostel', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+           <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Marco Boys Hostel</h3>
+                    <p class="card-text">Location: GUJRAT,Rajkot</p>
+                    <p class="card-text">Rent: Rs. 7000 / month</p>
+                    <P class="card-text">Facilities : Mess,Gym,Library</P>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Marco Boys Hostel', 'Rajkot', 7000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">Uv Boys Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('UV Boys Hostel', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+ <div class="col-md-4">
+           <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">PG Boys Hostel's & PG</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails(' PG Boys Hostels & PG', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+            <div class="card h-100 shadow" data-type="boy">
+                <div class="card-body">
+                    <h3 class="card-title">IMPERIA Boys' Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('IMPERIA Boys Hostel', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+         <div class="card h-100 shadow" data-type="girl">
+                <div class="card-body">
+                    <h3 class="card-title">Devine Girls Hostel </h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 40000 / Yearly</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Devine Girls Hostel', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+ <div class="col-md-4">
+           <div class="card h-100 shadow" data-type="girl">
+                <div class="card-body">
+                    <h3 class="card-title">Galaxy Hostel (Girls)</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 6000 / Yearly</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Galaxy Hostel (Girls)', 'Rajkot', 6000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-4">
+          <div class="card h-100 shadow" data-type="girl">
+                <div class="card-body">
+                    <h3 class="card-title">Kirti Girls' Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 8000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Kirti Girls Hostel', 'Rajkot', 8000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+ <div class="col-md-4">
+         <div class="card h-100 shadow" data-type="girl">
+                <div class="card-body">
+                    <h3 class="card-title">Samras Girls' Hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Samras Girls Hostel' , 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow" data-type="girl">
+                <div class="card-body">
+                    <h3 class="card-title">Sanskruti Girls hostel</h3>
+                    <p class="card-text">Location: Rajkot</p>
+                    <p class="card-text">Rent: Rs. 4000 / month</p>
+                    <button class="btn btn-primary"
+                            onclick="showDetails('Sanskruti Girls hostel', 'Rajkot', 4000)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="modal fade" id="hostelModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Hostel Details</h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+</div>
+
+<section class="container my-5" id="contact">
+
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <form id="contactForm">
+
+        <label for="studentName">Your Name</label>
+        <input class="form-control mb-3"
+               type="text"
+               id="studentName"
+               placeholder="Enter your name"
+               required>
+
+        <label for="studentEmail">Your Email</label>
+        <input class="form-control mb-3"
+               type="email"
+               id="studentEmail"
+               placeholder="Enter your email"
+               required>
+
+        <label for="studentMessage">Your Enquiry</label>
+        <textarea class="form-control mb-3"
+                  id="studentMessage"
+                  placeholder="Write your enquiry"
+                  required></textarea>
+
+        <button class="btn btn-primary" type="submit">
+            Send Enquiry
+        </button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

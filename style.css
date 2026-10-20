@@ -1,0 +1,72 @@
+
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+}
+
+.search {
+    background-color: white;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.hostels {
+    padding: 20px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px auto;
+    width: 300px;
+    border-radius: 10px;
+}
+.search{
+    background-color: rgb(0, 30, 255);
+    
+}
+
+/* Hostel Cards Design */
+
+.card {
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+button:active{
+    background-color:red;
+}
